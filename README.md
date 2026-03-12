@@ -67,3 +67,34 @@ python ~/g1_mop_project/g1_team_demo.py
 | `stop` | Stop animation |
 | `joint <name> <degrees>` | Set one joint |
 | `joints` | Show all joint angles |
+
+## Docker Setup (Easiest for Team Members)
+
+If you don't want to install everything manually, use Docker.
+
+### Prerequisites
+- Docker installed: `sudo apt install docker.io`
+- NVIDIA Container Toolkit (for GPU): `sudo apt install nvidia-container-toolkit`
+- Linux with X11 display (required for MuJoCo viewer)
+
+### Build the image (one-time, takes ~10 minutes)
+```bash
+cd g1_mop_project/docker
+docker build -t g1_mop_project .
+```
+
+### Run
+```bash
+cd g1_mop_project/docker
+./run.sh
+```
+
+This opens a terminal inside the container. Then type:
+```bash
+./start_sim.sh
+```
+
+The MuJoCo window will appear and the control panel starts automatically.
+
+### Commands inside the container
+Same as the non-Docker version - type `mop`, `wave`, `joint left_elbow -45`, etc.

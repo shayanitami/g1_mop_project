@@ -1,0 +1,14 @@
+ROBOT = "g1"
+ROBOT_SCENE = "../unitree_robots/" + ROBOT + "/scene_fixed.xml"
+DOMAIN_ID = 0
+INTERFACE = "lo"
+
+USE_JOYSTICK = 0
+JOYSTICK_TYPE = "xbox"
+JOYSTICK_DEVICE = 0
+
+PRINT_SCENE_INFORMATION = True
+ENABLE_ELASTIC_BAND = False
+
+SIMULATE_DT = 0.005
+VIEWER_DT = 0.02
